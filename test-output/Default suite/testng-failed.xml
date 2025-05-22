@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="adarshgowda.SeleniumTestNG.LoginTest">
+      <class name="adarshgowda.SeleniumTestNG.validateMenuTest">
         <methods>
+          <include name="validateMenu"/>
           <include name="quite"/>
           <include name="launchApplication"/>
-          <include name="login"/>
         </methods>
-      </class> <!-- adarshgowda.SeleniumTestNG.LoginTest -->
+      </class> <!-- adarshgowda.SeleniumTestNG.validateMenuTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

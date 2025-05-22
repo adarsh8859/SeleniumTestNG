@@ -2,6 +2,8 @@ package adarshgowda.SeleniumTestNG;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
 import org.testng.Assert;

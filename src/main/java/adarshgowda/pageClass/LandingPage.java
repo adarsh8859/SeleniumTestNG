@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 
-public class LandingPage {
+public class LandingPage extends UtilityClass {
 	
 
 	
@@ -16,6 +16,7 @@ public class LandingPage {
 	
 	public LandingPage(WebDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		
@@ -30,6 +31,9 @@ public class LandingPage {
 	@FindBy (id="login")
 	WebElement login;
 	
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMessage;
+	
 	By home = By.xpath("//*[@routerlink=\"/dashboard/\"]");
 
   public ProductCatalogue login(String name, String password) {
@@ -40,6 +44,12 @@ public class LandingPage {
 	  return productCatalogue;
 	  
   }
+  
+  public String getErrorMessage()
+	{
+	   waitForVisible(errorMessage);
+		return errorMessage.getText();
+	}
   
   
 }
